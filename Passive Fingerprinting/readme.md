@@ -36,3 +36,5 @@ There are some signs to find the OS, but none of them are 100% reliable.
 3. In User-Agent - find OS
 4. For malicious packets monitor HTTP Status Code - 302 - Redirection
 5. Analyze hexdump to find signatures related to metasploit etc. For example metasploit = 6D 65 74 61 73 70 6C 6F 69 74
+6. Analyze unique strings in hexdump to find OS, services etc.
+7. Identify other network devices like firewalls, switches, router etc.
