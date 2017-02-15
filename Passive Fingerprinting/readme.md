@@ -27,3 +27,11 @@ There are some signs to find the OS, but none of them are 100% reliable.
   5. Look for the TCP source ports used. There are difference of those ranges between different OSes
   6. Look for the IP ID and how it changes. There are difference of ID between different OSes
 	
+---------------------------------
+| OUR APPROACH FOR OS DETECTION |
+---------------------------------
+
+1. Extract GET/POST Request.
+2. Look for User-Agent string in HTTP Headers
+3. In User-Agent - find OS
+4. For malicious packets monitor HTTP Status Code - 302 - Redirection
