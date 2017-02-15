@@ -4,8 +4,8 @@
 | REQUIREMENTS |
 ----------------
 
-Python 3.X
-Scapy-python-3 module
+1. Python 3.X
+2. Scapy-python-3 module
 
 --------------
 | MOTIVATION |
