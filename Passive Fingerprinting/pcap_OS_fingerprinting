@@ -1,6 +1,8 @@
 #!/usr/bin/python
 from scapy.all import *
 
+
+#Change the path before executing the program
 pcap_output_file = "C:/Users/sarve/Desktop/pcaps/pcap_output_file.txt"
 pcap_file = "C:/Users/sarve/Desktop/pcaps/http_google.pcap"
 
