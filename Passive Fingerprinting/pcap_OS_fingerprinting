@@ -21,7 +21,9 @@ x = 0
 while x < len(a):
     # print summary of pcap file
     print("___________________")
-    print("|  PACKET" + str(x) + "  |")
+    print("|  PACKET" + str(x+1) + "  |")
+    # packet number starting from 1
+    
     print("___________________")
     print(a[x].summary())
     f1.write(a[x].summary())
