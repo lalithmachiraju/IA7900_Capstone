@@ -47,7 +47,7 @@ TCPPorts = {
 
 #Read a pcap file by adding the path of the file below.
 # Enter proper extension - pcap files have - cap, pcap, pcapng etc.
-pcap_file = "C:/Users/sarve/Desktop/pcaps/home2.pcapng"
+pcap_file = "C:/../../Desktop/pcaps/home2.pcapng"
 
 try:
     #Read a pcap file and store it in variable a
