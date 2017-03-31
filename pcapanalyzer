@@ -14,11 +14,6 @@ b.	MAC
 8.	ICMP – number of hops – map of network traceroute
 9.	TTL: 61 and OS is Linux, then there maybe 3 hops as TTL for Linux is 64
 
-TO BE DONE
-> save content in a file to current directory and use time function to name the file
-> Process the file to remove recurring data
-> categorize IP as local external multicast and broadcast
-> Map of devices
 '''
 
 from scapy.all import *
