@@ -50,7 +50,7 @@ TCPPorts = {
 
 #Read a pcap file by adding the path of the file below.
 # Enter proper extension - pcap files have - cap, pcap, pcapng etc.
-pcap_file = "C:/Users/sarve/Desktop/pcaps/home2.pcapng"
+pcap_file = "C:/../../home2.pcapng"
 
 # Create a file and add date and time to it
 # Replace the file extnesion .csv to any that you want . for example ->   .txt
