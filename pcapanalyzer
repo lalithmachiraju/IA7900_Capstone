@@ -13,11 +13,19 @@ b.	MAC
 7.	Websites visited? User agents
 8.	ICMP – number of hops – map of network traceroute
 9.	TTL: 61 and OS is Linux, then there maybe 3 hops as TTL for Linux is 64
+
+TO BE DONE
+> save content in a file to current directory and use time function to name the file
+> Process the file to remove recurring data
+> categorize IP as local external multicast and broadcast
+> Map of devices
 '''
 
 from scapy.all import *
 import re
 from impacket import *
+from datetime import datetime
+
 
 # print(x)
 # print(hexdump(a[x]))
@@ -47,7 +55,12 @@ TCPPorts = {
 
 #Read a pcap file by adding the path of the file below.
 # Enter proper extension - pcap files have - cap, pcap, pcapng etc.
-pcap_file = "C:/../../Desktop/pcaps/home2.pcapng"
+pcap_file = "C:/Users/sarve/Desktop/pcaps/home2.pcapng"
+
+# Create a file and add date and time to it
+# Replace the file extnesion .csv to any that you want . for example ->   .txt
+filename = 'C:/Users/sarve/Desktop/pcaps/pcapfile-%s.txt'%datetime.now().strftime('%Y-%m-%d_%H_%M')
+f1 = open(filename, 'w+')
 
 try:
     #Read a pcap file and store it in variable a
@@ -156,6 +169,9 @@ while x < len(a):
             # List displays in an array format. Hence we join to remove unrequired characters
             modifylist = ''.join(list)
             print(modifylist)
+            f1.write(modifylist)
+            f1.write("\n")
+            f1.write("\n")
 
     # Router communication involves sending ARP request
     if raw_packet.count("ARP") > 0:
@@ -184,6 +200,9 @@ while x < len(a):
         # List displays in an array format. Hence we join to remove unrequired characters
         modifylist = ''.join(list)
         print(modifylist)
+        f1.write(modifylist)
+        f1.write("\n")
+        f1.write("\n")
 
     # Login to idenitfy if there are Cisco Network Switch in the pcap file
 
@@ -205,6 +224,10 @@ while x < len(a):
         # List displays in an array format. Hence we join to remove unrequired characters
         modifylist = ''.join(list)
         print(modifylist)
-
+        f1.write(modifylist)
+        f1.write("\n")
+        f1.write("\n")
     #Move to next packet
     x += 1
+
+f1.close()
