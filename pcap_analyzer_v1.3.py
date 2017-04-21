@@ -22,7 +22,7 @@ IPProtocols = {
 # List of common TCP port numbers to find out running services
 
 TCPPorts = {
-            20: 'FTP', 21: 'FTP', 22: 'SSH', 23: 'TELNET', 25: 'SMTP', 80: 'HTTP', 443: 'HTTPS', 389: 'LDAP', 636: 'LDAPssl',
+            20: 'FTP', 21: 'FTP', 22: 'SSH', 23: 'TELNET', 25: 'SMTP', 53: 'DNS', 80: 'HTTP', 443: 'HTTPS', 389: 'LDAP', 636: 'LDAPssl',
             137: 'NetBIOS Name Service NBNS', 138: "NetBios Datagram Service NBDS", 520: 'RIP', 161: 'SNMP', 179: 'BGP',
             445: 'SMB', 67: 'DHCP Bootpc', 68: 'DHCP Bootps', 49: 'TACACS', 88: 'Kerberos', 156: 'SQL Service', 162: 'SNMP Trap',
             530: 'RPC', 5060: 'SIP non encrypted', 5061: 'SIP encrypted'
