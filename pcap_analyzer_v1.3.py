@@ -135,6 +135,11 @@ def analyzepcap():
 
                 # Calculate the TTL
                 list.append("TTL: " + str(a[x][IP].ttl) + "    ")
+                
+                # Displaying the domain names in communication
+                if raw_packet.haslayer(DNS) and raw_packet.getlayer(DNS).qr == 0:
+                    list.append("DNS details " + "Source :" + str(a[x][IP].src) + "Destination : " + str(
+                        a[x][IP].dst) + raw_packet.getLayer(DNS).qd.qname)
 
                 if raw_packet.count("Mac OS X") > 0:
                     n = raw_packet.find("Mac OS X")
